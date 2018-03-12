@@ -37,6 +37,6 @@ budgetdata_csv = os.path.join('..','myPython','budget_data_1.csv')
     print("Greatest Decrease in Revenue: " + str(decreased_value)
 
 #with open(Data_1, newline="", encoding='latin-1') as csvfile:
-with open(budgetCSV, 'r') as csvfile:
+with open(budgetdata_csv, 'r') as csvfile:
   csvreader = csv.reader(csvfile, delimiter=",")
     
