@@ -1,1 +1,39 @@
+import os
+import csv
 
+# Path to collect data from the Assignments folder
+budgetdata_csv = os.path.join('..','myPython','budget_data_1.csv')
+
+#Total months included in the dataset
+def getSum(budgetdata_csv):
+    months = column("Date").count
+
+# The total amount of revenue gained over the entire period
+def revenue(value):
+    total_revenue = column("Revenue").sum
+    revenue_gained = total_revenue / months
+
+    # The average change in revenue between months over the entire period
+    average_revenue = revenue_gained.mean
+
+    # The greatest decrease in revenue over the entire period
+    min_revenue = column("Revenue").min
+
+    # The greatest increase in revenue over the entire period
+    min_revenue = column("Revenue").max
+
+    # Print out the total months, total revenue, avereage revenue change and greatest increase in revenue
+    print("Financial Analysis")
+    print("-------------------------------")
+    print("Total Months: " + months[0])
+    print("Total Revenue: " + total_revenue)
+    print("Average Revenue Change: " + average_revenue)
+    print("Greatest Increase in Revenue: " + max_date + max_revenue)
+    print("Greatest Decrease in Revenue" + max_date + max_revenue)
+
+# Read in the CSV file
+with open(budgetdate_csv,'r') as csvfile:
+
+    # Split the data on commas
+    csvreader = csv.reader(csvfile, delimiter=',')
+    
