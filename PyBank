@@ -6,8 +6,8 @@ budgetdata_csv = os.path.join('..','myPython','budget_data_1.csv')
 
   month = 0
   total_revenue = 0
-  increased_value = ["", + 0];
-  decreased_value = ["", + 0];
+  increased_value = ["", + 0]:
+  decreased_value = ["", + 0]:
  
   for row in csvreader:
       #print(row[1])
